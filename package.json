@@ -1,7 +1,7 @@
 {
   "name": "transcode-js",
   "version": "1.0.0",
-  "description": "Production-grade stateless format conversion library. Transform data formats with a single function call.",
+  "description": "A modular, stateless, and strongly-typed library for in-memory data format conversion. Supports 27+ formats including Enterprise (HAR, Postman) and Binary (BSON, MsgPack) standards.",
   "author": "mhmmdyusran",
   "type": "module",
   "main": "./dist/index.js",
@@ -63,6 +63,11 @@
     "qs": "^6.13.1",
     "yaml": "^2.7.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhmmdyusran/transcode-js.git"
+  },
+  "homepage": "https://github.com/mhmmdyusran/transcode-js#readme",
   "devDependencies": {
     "@types/hjson": "^2.4.6",
     "@types/ini": "^4.1.1",

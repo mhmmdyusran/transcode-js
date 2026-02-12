@@ -1,6 +1,12 @@
 # transcode-js
 
-> Production-grade, stateless, in-memory format conversion library for Node.js.
+> A modular, stateless, and strongly-typed library for in-memory data format conversion. Supports 27+ formats including Enterprise (HAR, Postman) and Binary (BSON, MsgPack) standards.
+
+[![NPM Version](https://img.shields.io/npm/v/transcode-js?style=flat-square)](https://www.npmjs.com/package/transcode-js)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mhmmdyusran/transcode-js/ci.yml?branch=main&style=flat-square)](https://github.com/mhmmdyusran/transcode-js/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-green?style=flat-square&logo=nodedotjs)](https://nodejs.org/)
 
 Transform data between **27+ formats** — including JSON, YAML, XML, TOML, CSV, BSON, MsgPack, CBOR, and many more — with a single function call. No CLI, no options, no streaming, no global state. Just pure transformation.
 
@@ -21,28 +27,28 @@ import { convert } from "transcode-js";
 const xml = convert.transform({
   from: "yaml",
   to: "xml",
-  input: "name: Yusran\nage: 25"
+  input: "name: Yusran\nage: 25",
 });
 
 // JSON → BSON (returns Buffer)
 const bson = convert.transform({
   from: "json",
   to: "bson",
-  input: '{"name": "Yusran"}'
+  input: '{"name": "Yusran"}',
 });
 
 // CSV → JSON
 const json = convert.transform({
   from: "csv",
   to: "json",
-  input: "name,age\nYusran,25\nAli,30"
+  input: "name,age\nYusran,25\nAli,30",
 });
 
 // ENV → YAML
 const yaml = convert.transform({
   from: "env",
   to: "yaml",
-  input: "DB_HOST=localhost\nDB_PORT=5432"
+  input: "DB_HOST=localhost\nDB_PORT=5432",
 });
 ```
 
@@ -50,11 +56,11 @@ const yaml = convert.transform({
 
 ### `convert.transform({ from, to, input })`
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `from` | `SupportedFormat` | Source format |
-| `to` | `SupportedFormat` | Target format |
-| `input` | `unknown` | Input data (string, Buffer, or object) |
+| Parameter | Type              | Description                            |
+| --------- | ----------------- | -------------------------------------- |
+| `from`    | `SupportedFormat` | Source format                          |
+| `to`      | `SupportedFormat` | Target format                          |
+| `input`   | `unknown`         | Input data (string, Buffer, or object) |
 
 **Returns:** `string` or `Buffer` (see [Return Type](#return-type))
 
@@ -62,23 +68,23 @@ No additional parameters. No options. No chaining. No state.
 
 ## Supported Formats
 
-| Category | Formats |
-|----------|---------|
-| **JSON & Variants** | `json`, `json5`, `hjson`, `ndjson` |
-| **YAML** | `yaml`, `yml` |
-| **XML & Markup** | `xml`, `html` |
-| **Config** | `toml`, `ini`, `properties`, `env`, `dotenv`, `editorconfig` |
-| **Tabular** | `csv`, `tsv` |
-| **URL/Web** | `urlencoded`, `formdata` |
-| **Binary** | `bson`, `msgpack`, `cbor` |
-| **Enterprise** | `geojson`, `graphql-json`, `openapi-json`, `swagger-json`, `har`, `postman-collection` |
+| Category            | Formats                                                                                |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| **JSON & Variants** | `json`, `json5`, `hjson`, `ndjson`                                                     |
+| **YAML**            | `yaml`, `yml`                                                                          |
+| **XML & Markup**    | `xml`, `html`                                                                          |
+| **Config**          | `toml`, `ini`, `properties`, `env`, `dotenv`, `editorconfig`                           |
+| **Tabular**         | `csv`, `tsv`                                                                           |
+| **URL/Web**         | `urlencoded`, `formdata`                                                               |
+| **Binary**          | `bson`, `msgpack`, `cbor`                                                              |
+| **Enterprise**      | `geojson`, `graphql-json`, `openapi-json`, `swagger-json`, `har`, `postman-collection` |
 
 ## Return Type
 
-| Target Format | Return Type |
-|---------------|-------------|
-| `bson`, `msgpack`, `cbor` | `Buffer` |
-| Everything else | `string` |
+| Target Format             | Return Type |
+| ------------------------- | ----------- |
+| `bson`, `msgpack`, `cbor` | `Buffer`    |
+| Everything else           | `string`    |
 
 ```typescript
 // Returns string
