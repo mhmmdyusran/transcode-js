@@ -1,6 +1,6 @@
 {
   "name": "transcode-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modular, stateless, and strongly-typed library for in-memory data format conversion. Supports 27+ formats including Enterprise (HAR, Postman) and Binary (BSON, MsgPack) standards.",
   "author": "mhmmdyusran",
   "type": "module",
