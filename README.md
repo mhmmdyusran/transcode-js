@@ -1,12 +1,30 @@
-# transcode-js
+<h1 align="center">transcode-js</h1>
 
-> A modular, stateless, and strongly-typed library for in-memory data format conversion. Supports 27+ formats including Enterprise (HAR, Postman) and Binary (BSON, MsgPack) standards.
+> Production-grade, stateless, in-memory format conversion library for Node.js.
 
-[![NPM Version](https://img.shields.io/npm/v/transcode-js?style=flat-square)](https://www.npmjs.com/package/transcode-js)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/mhmmdyusran/transcode-js/ci.yml?branch=main&style=flat-square)](https://github.com/mhmmdyusran/transcode-js/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-green?style=flat-square&logo=nodedotjs)](https://nodejs.org/)
+<p align="center">
+
+  <a href="https://www.npmjs.com/package/transcode-js">
+    <img src="https://img.shields.io/npm/v/transcode-js?style=flat-square" alt="NPM Version" />
+  </a>
+
+  <a href="https://github.com/mhmmdyusran/transcode-js/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/mhmmdyusran/transcode-js/ci.yml?branch=main&style=flat-square" alt="Build Status" />
+  </a>
+
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="MIT License" />
+  </a>
+
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript" alt="TypeScript" />
+  </a>
+
+  <a href="https://nodejs.org/">
+    <img src="https://img.shields.io/badge/Node.js-18%2B-green?style=flat-square&logo=nodedotjs" alt="Node.js 18+" />
+  </a>
+
+</p>
 
 Transform data between **27+ formats** — including JSON, YAML, XML, TOML, CSV, BSON, MsgPack, CBOR, and many more — with a single function call. No CLI, no options, no streaming, no global state. Just pure transformation.
 
