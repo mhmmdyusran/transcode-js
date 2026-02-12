@@ -2,7 +2,7 @@
 
 > Production-grade, stateless, in-memory format conversion library for Node.js.
 
-Transform data between **28+ formats** — JSON, YAML, XML, TOML, CSV, BSON, MsgPack, CBOR, and many more — with a single function call. No CLI, no options, no streaming, no global state. Just pure transformation.
+Transform data between **27+ formats** — including JSON, YAML, XML, TOML, CSV, BSON, MsgPack, CBOR, and many more — with a single function call. No CLI, no options, no streaming, no global state. Just pure transformation.
 
 ## Install
 
